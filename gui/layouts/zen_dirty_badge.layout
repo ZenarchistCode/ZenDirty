@@ -1,0 +1,18 @@
+ImageWidgetClass ZenDirtyBadge
+{
+	ignorepointer 1
+	visible 0
+	clipchildren 0
+	color 1 1 1 1
+	size 40 40
+	hexactsize 1
+	vexactsize 1
+	fixaspect fixwidth
+	image0 "ZenDirty/gui/icons/zen_dirty_badge.paa"
+	mode blend
+	"src alpha" 1
+	"no wrap" 1
+	stretch 1
+	filter 1
+	nocache 0
+}

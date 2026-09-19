@@ -1,0 +1,9 @@
+static const string ZEN_DIRTY_STORAGE = "ZenDirty";
+static const string ZEN_DIRTY_DEFAULT_BADGE_TEXTURE = "ZenDirty\\gui\\icons\\zen_dirty_badge.paa";
+static const string ZEN_DIRTY_HANDS_MATERIAL = "ZenDirty\\data\\hands\\zen_dirty_hands.rvmat";
+static const string ZEN_DIRTY_BADGE_LAYOUT = "ZenDirty\\gui\\layouts\\zen_dirty_badge.layout";
+static const string ZEN_DIRTY_FLIES_SOUNDSET = "Flies_SoundSet";
+static const float ZEN_DIRTY_MAX = 100.0;
+static const int ZEN_DIRTY_SRC_WELL = 1;
+static const int ZEN_DIRTY_SRC_WATER = 2;
+static const int ZEN_DIRTY_SRC_CONTAINER = 3;

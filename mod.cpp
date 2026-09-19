@@ -1,0 +1,10 @@
+name = "ZenDirty";
+picture = "";
+logoSmall = "";
+logo = "";
+logoOver = "";
+tooltip = "ZenDirty";
+overview = "Simple player dirtiness, washing and hygiene effects.";
+action = "";
+author = "Zenarchist";
+version = "1.0";
