@@ -60,6 +60,7 @@ class ZenDirtyConfig : ZenConfigBase
 	float FliesCheckIntervalMaxSeconds;
 	float FliesDurationMinSeconds;
 	float FliesDurationMaxSeconds;
+	bool FliesAlwaysTriggerOnFullDirty;
 
 	float WashDirtyWellsThreshold;
 	float WashDirtyWaterSourceThreshold;
@@ -92,7 +93,7 @@ class ZenDirtyConfig : ZenConfigBase
 
 	override string GetCurrentVersion()
 	{
-		return "1.29.2";
+		return "1.29.3";
 	}
 
 	override bool ShouldLoadOnServer()
@@ -148,7 +149,7 @@ class ZenDirtyConfig : ZenConfigBase
 		FliesCheckIntervalMaxSeconds = 900.0;
 		FliesDurationMinSeconds = 60.0;
 		FliesDurationMaxSeconds = 120.0;
-
+		FliesAlwaysTriggerOnFullDirty = true;
 		WashDirtyWellsThreshold = 10.0;
 		WashDirtyWaterSourceThreshold = 10.0;
 		WashDirtyContainerThreshold = 10.0;

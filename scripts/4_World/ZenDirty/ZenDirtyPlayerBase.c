@@ -121,7 +121,9 @@ modded class PlayerBase
 
 		if (!wasFullDirty && isFullDirty)
 		{
-			ZenDirty_StartFliesServer();
+			if (GetZenDirtyConfig().FliesAlwaysTriggerOnFullDirty)
+				ZenDirty_StartFliesServer();
+
 			ZenDirty_ScheduleNextFliesCheck();
 		}
 		else
@@ -129,8 +131,6 @@ modded class PlayerBase
 		{
 			ZenDirty_StopFliesSystem();
 		}
-
-		
 	}
 
 	void ZenDirty_CleanAmount(float amount, bool applyColdEffect = true)
@@ -547,7 +547,9 @@ modded class PlayerBase
 
 			if (ZenDirty_IsFullDirty())
 			{
-				ZenDirty_StartFliesServer();
+				if (GetZenDirtyConfig().FliesAlwaysTriggerOnFullDirty)
+					ZenDirty_StartFliesServer();
+
 				ZenDirty_ScheduleNextFliesCheck();
 			}
 		}
