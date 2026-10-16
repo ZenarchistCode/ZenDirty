@@ -46,7 +46,7 @@ class ActionZenDirtyWashSelfWater : ActionContinuousBase
 	override void CreateConditionComponents()
 	{
 		m_ConditionItem = new CCINone();
-		m_ConditionTarget = new CCTWaterSurfaceEx(UAMaxDistances.DEFAULT, LIQUID_GROUP_WATER - LIQUID_SNOW);
+		m_ConditionTarget = new CCTLiquid(LIQUID_GROUP_WATER - LIQUID_SNOW - LIQUID_HOTWATER, UAMaxDistances.DEFAULT, UAMaxDistances.DEFAULT);
 	}
 
 	override bool ActionCondition(PlayerBase player, ActionTarget target, ItemBase item)

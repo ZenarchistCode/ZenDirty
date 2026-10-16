@@ -26,18 +26,19 @@ modded class JMPlayerInstance
 		return m_ZenDirty;
 	}
 
-	override void OnSendHealth(ParamsWriteContext ctx)
+	override void OnSendStatus(ParamsWriteContext ctx)
 	{
-		super.OnSendHealth(ctx);
+		super.OnSendStatus(ctx);
 
 		ctx.Write(m_ZenDirty);
 	}
 
-	override void OnRecieveHealth(ParamsReadContext ctx)
+	override bool OnReceiveStatus(ParamsReadContext ctx)
 	{
-		super.OnRecieveHealth(ctx);
+		if (!super.OnReceiveStatus(ctx))
+			return false;
 
-		ctx.Read(m_ZenDirty);
+		return ctx.Read(m_ZenDirty);
 	}
 }
 #endif

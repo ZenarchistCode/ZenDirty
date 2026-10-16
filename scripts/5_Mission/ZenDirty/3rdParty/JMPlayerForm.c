@@ -4,13 +4,13 @@ modded class JMPlayerForm
 	UIActionSlider m_ZenDirty;
 	bool m_ZenDirtyUpdated;
 
-	override private Widget InitActionWidgetsStats(Widget actionsParent)
+	override protected Widget InitActionWidgetsStats(Widget actionsParent)
 	{
 		Widget parent = super.InitActionWidgetsStats(actionsParent);
 
-		if (!m_ZenDirty && m_Health)
+		if (!m_ZenDirty && m_Stamina)
 		{
-			Widget parentWidgie = m_Health.GetLayoutRoot().GetParent();
+			Widget parentWidgie = m_Stamina.GetLayoutRoot().GetParent();
 
 			m_ZenDirty = UIActionManager.CreateSlider(parentWidgie, "ZenDirty:", 0, ZEN_DIRTY_MAX, this, "Click_SetZenDirty");
 			m_ZenDirty.SetSliderWidth(0.5);
