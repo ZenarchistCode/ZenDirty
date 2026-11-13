@@ -8,15 +8,6 @@ static ZenDirtyConfig GetZenDirtyConfig()
 	return g_ZenDirtyConfig;
 }
 
-modded class ZenConfigRegister
-{
-	override void RegisterPreload()
-	{
-		super.RegisterPreload();
-		RegisterType(ZenDirtyConfig);
-	}
-}
-
 class ZenDirtyClientConfigPayload
 {
 	bool Enabled;
@@ -42,6 +33,7 @@ class ZenDirtyClientConfigPayload
 	float DirtyHandsThreshold;
 }
 
+[ZenRegisterConfig(ZenDirtyConfig)]
 class ZenDirtyConfig : ZenConfigBase
 {
 	bool Enabled;

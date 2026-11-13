@@ -68,6 +68,11 @@ class ActionZenDirtyWashSelfWater : ActionContinuousBase
 		return player.ZenDirty_CanWash(ZEN_DIRTY_SRC_WATER);
 	}
 
+	override bool IsLockTargetOnUse()
+	{
+		return false;
+	}
+
 	override void OnStartServer(ActionData action_data)
 	{
 		super.OnStartServer(action_data);
